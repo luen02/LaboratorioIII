@@ -6,7 +6,7 @@
       <button
         pButton
         pRipple
-        label="New"
+        label="Nueva ciudad"
         icon="pi pi-plus"
         class="p-button-success p-mr-2"
         (click)="openNew()"
@@ -27,14 +27,14 @@
         mode="basic"
         accept="image/*"
         [maxFileSize]="1000000"
-        label="Import"
-        chooseLabel="Import"
+        label="Importar"
+        chooseLabel="Importar"
         class="p-mr-2 p-d-inline-block"
       ></p-fileUpload>
       <button
         pButton
         pRipple
-        label="Export"
+        label="Exportar"
         icon="pi pi-upload"
         class="p-button-help"
       ></button>
@@ -52,7 +52,7 @@
     [(selection)]="selectedCities"
     [rowHover]="true"
     dataKey="id"
-    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} entradas"
     [showCurrentPageReport]="true"
   >
     <ng-template pTemplate="caption">
@@ -64,7 +64,7 @@
             pInputText
             type="text"
             (input)="dt.filterGlobal($event.target.value, 'contains')"
-            placeholder="Search..."
+            placeholder="Buscar..."
           />
         </span>
       </div>
@@ -114,7 +114,7 @@
     </ng-template>
     <ng-template pTemplate="summary">
       <div class="p-d-flex p-ai-center p-jc-between">
-        In total there are {{ cities ? cities.length : 0 }} cities.
+        En total hay {{ cities ? cities.length : 0 }} ciudades.
       </div>
     </ng-template>
   </p-table>
@@ -123,7 +123,7 @@
 <p-dialog
   [(visible)]="cityDialog"
   [style]="{ width: '450px' }"
-  header="City Details"
+  header="Datos de la Ciudad"
   [modal]="true"
   styleClass="p-fluid"
 >
@@ -174,7 +174,7 @@
     <button
       pButton
       pRipple
-      label="Cancel"
+      label="Cancelar"
       icon="pi pi-times"
       class="p-button-text"
       (click)="hideDialog()"
@@ -182,7 +182,7 @@
     <button
       pButton
       pRipple
-      label="Save"
+      label="Guardar"
       icon="pi pi-check"
       class="p-button-text"
       (click)="saveCity()"

@@ -47,8 +47,8 @@ export class AppComponent {
 
   deleteSelectedCities() {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete the selected cities?',
-      header: 'Confirm',
+      message: '¿Estás seguro de eliminar las ciudades seleccionadas?',
+      header: 'Confirmar',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
         this.cities = this.cities.filter(
@@ -72,8 +72,8 @@ export class AppComponent {
 
   deleteCity(city: City) {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete ' + city.ciudad + '?',
-      header: 'Confirm',
+      message: '¿Estás seguro de eliminar ' + city.ciudad + '?',
+      header: 'Confirmar',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
         this.cities = this.cities.filter((val) => val.id !== city.id);
