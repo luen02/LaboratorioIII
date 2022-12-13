@@ -15,18 +15,16 @@ export class BarchartComponent {
     xAxis: {
       type: 'category',
       data: [
-        'Argentina',
-        'Bolivia',
-        'Brasil',
-        'Chile',
-        'Colombia',
-        'Ecuador',
-        'Guyana',
-        'Paraguay',
-        'Perú',
-        'Surinam',
-        'Uruguay',
-        'Venezuela',
+        'Lima',
+        'Arequipa',
+        'Trujillo',
+        'Cusco',
+        'Chiclayo',
+        'Huaraz',
+        'Huancayo',
+        'Ayacucho',
+        'Iquitos',
+        'Piura',
       ],
     },
 
@@ -36,8 +34,8 @@ export class BarchartComponent {
     series: [
       {
         data: [
-          47327407, 11673021, 21255941, 19116201, 50882891, 17643054, 786552,
-          7132538, 33050325, 586632, 3473730, 28435940,
+          9943800, 1142900, 1088300, 437538, 562508, 123069, 400271,
+          228427, 163502, 560345,
         ],
         type: 'bar',
       },

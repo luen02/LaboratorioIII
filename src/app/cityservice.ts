@@ -6,33 +6,29 @@ import { City } from './city';
 @Injectable()
 export class CityService {
   alcaldeNames: string[] = [
-    'Buenos Aires',
-    'La Paz',
-    'Brasilia',
-    'Santiago de Chile',
-    'Bogotá',
-    'Quito',
-    'Georgetown',
-    'Asunción',
-    'Lima',
-    'Paramaribo',
-    'Montevideo',
-    'Caracas',
+    'Miguel Romero Sotelo',
+    'Omar Julio Candia Aguilar',
+    'Daniel Marcelo Jacinto',
+    'Víctor G. Boluarte Medina',
+    'Marcos Gasco Arrobas',
+    'Cesar Martin Bustamante Flores',
+    'Juan Carlos Quispe Ledesma',
+    'Yuri Alberto Gutiérrez Gutiérrez',
+    'Francisco Sanjurjo Dávila',
+    'Juan Díaz Dios',
   ];
 
   cityNames: string[] = [
-    'Argentina',
-    'Bolivia',
-    'Brasil',
-    'Chile',
-    'Colombia',
-    'Ecuador',
-    'Guayana',
-    'Paraguay',
-    'Perú',
-    'Surinam',
-    'Uruguay',
-    'Venezuela',
+    'Lima',
+    'Arequipa',
+    'Trujillo',
+    'Cusco',
+    'Chiclayo',
+    'Huaraz',
+    'Huancayo',
+    'Ayacucho',
+    'Iquitos',
+    'Piura',
   ];
 
   constructor(private http: HttpClient) {}
