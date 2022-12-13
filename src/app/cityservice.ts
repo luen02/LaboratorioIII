@@ -5,7 +5,7 @@ import { City } from './city';
 
 @Injectable()
 export class CityService {
-  capitalNames: string[] = [
+  alcaldeNames: string[] = [
     'Buenos Aires',
     'La Paz',
     'Brasilia',
@@ -20,7 +20,7 @@ export class CityService {
     'Caracas',
   ];
 
-  countryNames: string[] = [
+  cityNames: string[] = [
     'Argentina',
     'Bolivia',
     'Brasil',
@@ -67,15 +67,15 @@ export class CityService {
       });
   }
 
-  generateCountry(): City {
-    const country: City = {
+  generateCity(): City {
+    const city: City = {
       id: this.generateId(),
-      name: this.generateName(),
-      capital: this.generateCapital(),
+      ciudad: this.generateCiudad(),
+      alcalde: this.generateAlcalde(),
       numero_de_habitantes: this.generateNumero_de_habitantes(),
     };
 
-    return country;
+    return city;
   }
 
   generateId() {
@@ -90,12 +90,12 @@ export class CityService {
     return text;
   }
 
-  generateName() {
-    return this.countryNames[Math.floor(Math.random() * Math.floor(30))];
+  generateCiudad() {
+    return this.cityNames[Math.floor(Math.random() * Math.floor(30))];
   }
 
-  generateCapital() {
-    return this.capitalNames[Math.floor(Math.random() * Math.floor(30))];
+  generateAlcalde() {
+    return this.alcaldeNames[Math.floor(Math.random() * Math.floor(30))];
   }
   generateNumero_de_habitantes() {
     return Math.floor(Math.random() * Math.floor(299) + 1);

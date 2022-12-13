@@ -17,8 +17,8 @@
         [label]="Delete"
         icon="pi pi-trash"
         class="p-button-danger"
-        (click)="deleteSelectedCountries()"
-        [disabled]="!selectedCountries || !selectedCountries.length"
+        (click)="deleteSelectedCities()"
+        [disabled]="!selectedCities || !selectedCities.length"
       ></button>
     </ng-template>
 
@@ -45,15 +45,11 @@
 
   <p-table
     #dt
-    [value]="countries"
+    [value]="cities"
     [rows]="10"
     [paginator]="true"
-    [globalFilterFields]="[
-      'name',
-      'capital',
-      'habitantes'
-    ]"
-    [(selection)]="selectedCountries"
+    [globalFilterFields]="['ciudad', 'alcalde', 'habitantes']"
+    [(selection)]="selectedCities"
     [rowHover]="true"
     dataKey="id"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
@@ -61,7 +57,7 @@
   >
     <ng-template pTemplate="caption">
       <div class="p-d-flex p-ai-center p-jc-between">
-        <h5 class="p-m-0">Manage Countries</h5>
+        <h5 class="p-m-0">Administrar Ciudades</h5>
         <span class="p-input-icon-left">
           <i class="pi pi-search"></i>
           <input
@@ -78,11 +74,11 @@
         <th style="width: 3rem">
           <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
         </th>
-        <th pSortableColumn="name">
-          Name <p-sortIcon field="name"></p-sortIcon>
+        <th pSortableColumn="ciudad">
+          Ciudad <p-sortIcon field="ciudad"></p-sortIcon>
         </th>
-        <th pSortableColumn="capital">
-          Capital <p-sortIcon field="capital"></p-sortIcon>
+        <th pSortableColumn="alcalde">
+          Nombre de Alcalde <p-sortIcon field="alcalde"></p-sortIcon>
         </th>
         <th pSortableColumn="habitantes">
           Habitantes <p-sortIcon field="habitantes"></p-sortIcon>
@@ -95,71 +91,71 @@
         <td>
           <p-tableCheckbox [value]="country"></p-tableCheckbox>
         </td>
-        <td>{{ country.name }}</td>
-        <td>{{ country.capital }}</td>
-        <td>{{ country.habitantes }}</td>
+        <td>{{ city.ciudad }}</td>
+        <td>{{ city.alcalde }}</td>
+        <td>{{ city.habitantes }}</td>
         <td>
           <button
             pButton
             pRipple
             icon="pi pi-pencil"
             class="p-button-rounded p-button-success p-mr-2"
-            (click)="editCountry(country)"
+            (click)="editCity(city)"
           ></button>
           <button
             pButton
             pRipple
             icon="pi pi-trash"
             class="p-button-rounded p-button-warning"
-            (click)="deleteCountry(country)"
+            (click)="deleteCity(city)"
           ></button>
         </td>
       </tr>
     </ng-template>
     <ng-template pTemplate="summary">
       <div class="p-d-flex p-ai-center p-jc-between">
-        In total there are {{ countries ? countries.length : 0 }} countries.
+        In total there are {{ cities ? cities.length : 0 }} cities.
       </div>
     </ng-template>
   </p-table>
 </div>
 
 <p-dialog
-  [(visible)]="countryDialog"
+  [(visible)]="cityDialog"
   [style]="{ width: '450px' }"
-  header="Country Details"
+  header="City Details"
   [modal]="true"
   styleClass="p-fluid"
 >
   <ng-template pTemplate="content">
     <div class="p-field">
-      <label for="name">Name</label>
+      <label for="ciudad">Ciudad</label>
       <input
         type="text"
         pInputText
-        id="name"
-        [(ngModel)]="country.name"
+        id="ciudad"
+        [(ngModel)]="city.ciudad"
         required
         autofocus
       />
-      <small class="p-invalid" *ngIf="submitted && !country.name"
-        >Name is required.</small
+      <small class="p-invalid" *ngIf="submitted && !city.name"
+        >Ciudad es requerida.</small
       >
     </div>
 
     <div class="p-formgrid p-grid">
       <div class="p-field p-col">
-        <label for="capital">Capital</label>
+        <label for="alcalde">Nombre de Alcalde</label>
         <input
           type="text"
           pInputText
-          id="capital"
-          [(ngModel)]="country.capital"
+          id="alcalde"
+          [(ngModel)]="city.alcalde"
           required
           autofocus
         />
-        <small class="p-invalid" *ngIf="submitted && !country.capital"
-          >Capital is required.</small
+        <small class="p-invalid" *ngIf="submitted && !city.alcalde"
+          >Nombre de alcalde es requerido.</small
         >
       </div>
     </div>
@@ -168,7 +164,7 @@
         <label for="habitantes">Habitantes</label>
         <p-inputNumber
           id="habitantes"
-          [(ngModel)]="country.habitantes"
+          [(ngModel)]="city.habitantes"
         ></p-inputNumber>
       </div>
     </div>
@@ -189,7 +185,7 @@
       label="Save"
       icon="pi pi-check"
       class="p-button-text"
-      (click)="saveCountry()"
+      (click)="saveCity()"
     ></button>
   </ng-template>
 </p-dialog>

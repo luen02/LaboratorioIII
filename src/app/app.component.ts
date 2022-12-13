@@ -72,7 +72,7 @@ export class AppComponent {
 
   deleteCity(city: City) {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete ' + city.name + '?',
+      message: 'Are you sure you want to delete ' + city.ciudad + '?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
@@ -96,7 +96,7 @@ export class AppComponent {
   saveCity() {
     this.submitted = true;
 
-    if (this.city.name.trim()) {
+    if (this.city.ciudad.trim()) {
       if (this.city.id) {
         this.cities[this.findIndexById(this.city.id)] = this.city;
         this.messageService.add({
