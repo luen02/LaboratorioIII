@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Argentina",
+      "capital": "Buenos Aires",
+      "habitantes": 47327407
+    },
+    {
+      "id": "2",
+      "name": "Bolivia",
+      "capital": "La Paz",
+      "habitantes": 11673021
+    },
+    {
+      "id": "3",
+      "name": "Brasil",
+      "capital": "Brasilia",
+      "habitantes": 212559417
+    },
+    {
+      "id": "4",
+      "name": "Chile",
+      "capital": "Santiago de Chile",
+      "habitantes": 19116201
+    },
+    {
+      "id": "5",
+      "name": "Colombia",
+      "capital": "Bogotá",
+      "habitantes": 50882891
+    },
+    {
+      "id": "6",
+      "name": "Ecuador",
+      "capital": "Quito",
+      "habitantes": 17643054
+    },
+    {
+      "id": "7",
+      "name": "Guayana",
+      "capital": "Georgetown",
+      "habitantes": 786552
+    },
+    {
+      "id": "8",
+      "name": "Paraguay",
+      "capital": "Asunción",
+      "habitantes": 7132538
+    },
+    {
+      "id": "9",
+      "name": "Perú",
+      "capital": "Lima",
+      "habitantes": 33050325
+    },
+    {
+      "id": "10",
+      "name": "Surinam",
+      "capital": "Paramaribo",
+      "habitantes": 586632
+    },
+    {
+      "id": "11",
+      "name": "Uruguay",
+      "capital": "Montevideo",
+      "habitantes": 3473730
+    },
+    {
+      "id": "12",
+      "name": "Venezuela",
+      "capital": "Caracas",
+      "habitantes": 28435940
+    }
+  ]
+}
