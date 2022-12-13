@@ -16,9 +16,6 @@ export class CityService {
     'Yuri Alberto Gutiérrez Gutiérrez',
     'Francisco Sanjurjo Dávila',
     'Juan Díaz Dios',
-    'Paramaribo',
-    'Montevideo',
-    'Caracas',
   ];
 
   cityNames: string[] = [
