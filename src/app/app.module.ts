@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CountryService } from './countryservice';
+import { CityService } from './cityservice';
 import { NgxEchartsModule } from 'ngx-echarts';
 
 import { TableModule } from 'primeng/table';
@@ -62,6 +62,6 @@ import { BarchartComponent } from './components/barchart/barchart.component';
   ],
   declarations: [AppComponent, BarchartComponent],
   bootstrap: [AppComponent],
-  providers: [CountryService, MessageService, ConfirmationService],
+  providers: [CityService, MessageService, ConfirmationService],
 })
 export class AppModule {}

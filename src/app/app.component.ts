@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Country } from './country';
-import { CountryService } from './countryservice';
+import { City } from './city';
+import { CityService } from './cityservice';
 import { ConfirmationService } from 'primeng/api';
 import { MessageService } from 'primeng/api';
-
 
 @Component({
   selector: 'app-root',
@@ -20,69 +19,69 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  countryDialog: boolean;
+  cityDialog: boolean;
 
-  countries: Country[];
+  cities: City[];
 
-  country: Country;
+  city: City;
 
-  selectedCountries: Country[];
+  selectedCities: City[];
 
   submitted: boolean;
 
   constructor(
-    private countryService: CountryService,
+    private cityService: CityService,
     private messageService: MessageService,
     private confirmationService: ConfirmationService
   ) {}
 
   ngOnInit() {
-    this.countryService.getCountries().then((data) => (this.countries = data));
+    this.cityService.getCities().then((data) => (this.cities = data));
   }
 
   openNew() {
-    this.country = {};
+    this.city = {};
     this.submitted = false;
-    this.countryDialog = true;
+    this.cityDialog = true;
   }
 
-  deleteSelectedCountries() {
+  deleteSelectedCities() {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete the selected countries?',
+      message: 'Are you sure you want to delete the selected cities?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.countries = this.countries.filter(
-          (val) => !this.selectedCountries.includes(val)
+        this.cities = this.cities.filter(
+          (val) => !this.selectedCities.includes(val)
         );
-        this.selectedCountries = null;
+        this.selectedCities = null;
         this.messageService.add({
           severity: 'success',
           summary: 'Successful',
-          detail: 'Countries Deleted',
+          detail: 'Cities Deleted',
           life: 3000,
         });
       },
     });
   }
 
-  editCountry(country: Country) {
-    this.country = { ...country };
-    this.countryDialog = true;
+  editCity(city: City) {
+    this.city = { ...city };
+    this.cityDialog = true;
   }
 
-  deleteCountry(country: Country) {
+  deleteCity(city: City) {
     this.confirmationService.confirm({
-      message: 'Are you sure you want to delete ' + country.name + '?',
+      message: 'Are you sure you want to delete ' + city.name + '?',
       header: 'Confirm',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-        this.countries = this.countries.filter((val) => val.id !== country.id);
-        this.country = {};
+        this.cities = this.cities.filter((val) => val.id !== city.id);
+        this.city = {};
         this.messageService.add({
           severity: 'success',
           summary: 'Successful',
-          detail: 'Country Deleted',
+          detail: 'City Deleted',
           life: 3000,
         });
       },
@@ -90,44 +89,43 @@ export class AppComponent {
   }
 
   hideDialog() {
-    this.countryDialog = false;
+    this.cityDialog = false;
     this.submitted = false;
   }
 
-  saveCountry() {
+  saveCity() {
     this.submitted = true;
 
-    if (this.country.name.trim()) {
-      if (this.country.id) {
-        this.countries[this.findIndexById(this.country.id)] = this.country;
+    if (this.city.name.trim()) {
+      if (this.city.id) {
+        this.cities[this.findIndexById(this.city.id)] = this.city;
         this.messageService.add({
           severity: 'success',
           summary: 'Successful',
-          detail: 'Country Updated',
+          detail: 'City Updated',
           life: 3000,
         });
       } else {
-        this.country.id = this.createId();
-        this.country.image = 'country-placeholder.svg';
-        this.countries.push(this.country);
+        this.city.id = this.createId();
+        this.cities.push(this.city);
         this.messageService.add({
           severity: 'success',
           summary: 'Successful',
-          detail: 'Country Created',
+          detail: 'City Created',
           life: 3000,
         });
       }
 
-      this.countries = [...this.countries];
-      this.countryDialog = false;
-      this.country = {};
+      this.cities = [...this.cities];
+      this.cityDialog = false;
+      this.city = {};
     }
   }
 
   findIndexById(id: string): number {
     let index = -1;
-    for (let i = 0; i < this.countries.length; i++) {
-      if (this.countries[i].id === id) {
+    for (let i = 0; i < this.cities.length; i++) {
+      if (this.cities[i].id === id) {
         index = i;
         break;
       }
@@ -146,4 +144,3 @@ export class AppComponent {
     return id;
   }
 }
-
