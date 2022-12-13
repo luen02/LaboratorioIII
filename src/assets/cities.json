@@ -2,75 +2,63 @@
   "data": [
     {
       "id": "1",
-      "ciudad": "Argentina",
-      "alcalde": "Buenos Aires",
-      "habitantes": 47327407
+      "ciudad": "Lima",
+      "alcalde": "Miguel Romero Sotelo",
+      "habitantes": 9943800
     },
     {
       "id": "2",
-      "ciudad": "Bolivia",
-      "alcalde": "La Paz",
-      "habitantes": 11673021
+      "ciudad": "Arequipa",
+      "alcalde": "Omar Julio Candia Aguilar",
+      "habitantes": 1142900
     },
     {
       "id": "3",
-      "ciudad": "Brasil",
-      "alcalde": "Brasilia",
-      "habitantes": 212559417
+      "ciudad": "Trujillo",
+      "alcalde": "Daniel Marcelo Jacinto",
+      "habitantes": 1088300
     },
     {
       "id": "4",
-      "ciudad": "Chile",
-      "alcalde": "Santiago de Chile",
-      "habitantes": 19116201
+      "ciudad": "Cusco",
+      "alcalde": "Víctor G. Boluarte Medina",
+      "habitantes": 437538
     },
     {
       "id": "5",
-      "ciudad": "Colombia",
-      "alcalde": "Bogotá",
-      "habitantes": 50882891
+      "ciudad": "Chiclayo",
+      "alcalde": "Marcos Gasco Arrobas",
+      "habitantes": 562508
     },
     {
       "id": "6",
-      "ciudad": "Ecuador",
-      "alcalde": "Quito",
-      "habitantes": 17643054
+      "ciudad": "Huaraz",
+      "alcalde": "Cesar Martin Bustamante Flores",
+      "habitantes": 123069
     },
     {
       "id": "7",
-      "ciudad": "Guayana",
-      "alcalde": "Georgetown",
-      "habitantes": 786552
+      "ciudad": "Huancayo",
+      "alcalde": "Juan Carlos Quispe Ledesma",
+      "habitantes": 400271
     },
     {
       "id": "8",
-      "ciudad": "Paraguay",
-      "alcalde": "Asunción",
-      "habitantes": 7132538
+      "ciudad": "Ayacucho",
+      "alcalde": "Yuri Alberto Gutiérrez Gutiérrez",
+      "habitantes": 228427
     },
     {
       "id": "9",
-      "ciudad": "Perú",
-      "alcalde": "Lima",
-      "habitantes": 33050325
+      "ciudad": "Iquitos",
+      "alcalde": "Francisco Sanjurjo Dávila",
+      "habitantes": 163502
     },
     {
       "id": "10",
-      "ciudad": "Surinam",
-      "alcalde": "Paramaribo",
-      "habitantes": 586632
-    },
-    {
-      "id": "11",
-      "ciudad": "Uruguay",
-      "alcalde": "Montevideo",
-      "habitantes": 3473730
-    },
-    {
-      "id": "12",
-      "ciudad": "Venezuela",
-      "alcalde": "Caracas",
-      "habitantes": 28435940
+      "ciudad": "Piura",
+      "alcalde": "Juan Díaz Dios",
+      "habitantes": 560345
     }
   ]
 }
