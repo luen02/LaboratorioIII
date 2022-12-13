@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { City } from './city';
 
 @Injectable()
-export class CountryService {
+export class CityService {
   capitalNames: string[] = [
     'Buenos Aires',
     'La Paz',
