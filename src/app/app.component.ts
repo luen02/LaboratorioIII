@@ -57,8 +57,8 @@ export class AppComponent {
         this.selectedCities = null;
         this.messageService.add({
           severity: 'success',
-          summary: 'Successful',
-          detail: 'Cities Deleted',
+          summary: 'Realizado con éxito',
+          detail: 'Ciudad(es) eliminada(s)',
           life: 3000,
         });
       },
@@ -80,8 +80,8 @@ export class AppComponent {
         this.city = {};
         this.messageService.add({
           severity: 'success',
-          summary: 'Successful',
-          detail: 'City Deleted',
+          summary: 'Realizado con éxito',
+          detail: 'Ciudad Eliminada',
           life: 3000,
         });
       },
@@ -101,8 +101,8 @@ export class AppComponent {
         this.cities[this.findIndexById(this.city.id)] = this.city;
         this.messageService.add({
           severity: 'success',
-          summary: 'Successful',
-          detail: 'City Updated',
+          summary: 'Realizado con éxito',
+          detail: 'Ciudad Actualizada',
           life: 3000,
         });
       } else {
@@ -110,8 +110,8 @@ export class AppComponent {
         this.cities.push(this.city);
         this.messageService.add({
           severity: 'success',
-          summary: 'Successful',
-          detail: 'City Created',
+          summary: 'Realizado con éxito',
+          detail: 'Ciudad Creada',
           life: 3000,
         });
       }
